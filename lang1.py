@@ -1,9 +1,10 @@
 import streamlit as st
 import google.generativeai as genai
+import json
+import numpy as np
+import pandas as pd
 from datetime import datetime
 import requests
-import os
-from dotenv import load_dotenv 
 
 # Configure Google Gemini API with your API key
 API_KEY = os.getenv("GEMINI_API_KEY")
