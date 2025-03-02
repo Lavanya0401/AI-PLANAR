@@ -14,7 +14,8 @@ load_dotenv()
 # Configure Google Gemini API with your API key
 API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel("gemini-1.5-flash")
+SYSTEM_PROMPT = "Provide only the booking links for travel options."
+model = genai.GenerativeModel("gemini-2.0-flash-exp", system_instruction=SYSTEM_PROMPT)
 
 def get_travel_recommendation(source, destination, travel_date):
     prompt = f"""
