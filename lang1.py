@@ -8,6 +8,9 @@ import requests
 import os
 from dotenv import load_dotenv 
 
+# Load environment variables
+load_dotenv()
+
 # Configure Google Gemini API with your API key
 API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=API_KEY)
